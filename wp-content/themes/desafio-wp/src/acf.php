@@ -1,5 +1,12 @@
 <?php 
 
+add_action( 'admin_notices', 'my_theme_dependencies' );
+
+function my_theme_dependencies() {
+  if( ! function_exists('acf_add_local_field_group') )
+    echo '<div class="error"><p>' . __( 'Aviso: O tema Play precisa do plugin Advanced Custom Fields para funcionar corretamente!', 'my-theme' ) . '</p></div>';
+}
+
 
 add_action( 'acf/include_fields', function() {
 	if ( ! function_exists( 'acf_add_local_field_group' ) ) {
