@@ -27,10 +27,9 @@ $my_query = new WP_Query($args);
 ?>
 
 <main id="primary" class="site-main mt-16 flex justify-center w-full mb-96">
-
 	<div class="sm:block md:flex w-4/5">
 		<div class=" max-sm:w-full md:w-1/2 mb-10">
-			<h1 class=" text-4xl font-bold text-red-600 block mb-7">
+			<h1 class="mt-12 text-4xl font-bold text-red-600 block mb-7">
 				<?php echo get_queried_object()->name ?>
 			</h1>
 			<p class="sm:pr-1 md:pr-36 break-all">
@@ -42,7 +41,7 @@ $my_query = new WP_Query($args);
 			<ul class="flex flex-wrap">
 				<?php foreach ($my_query->posts as $video_itm): ?>
 
-					<li class="flex-1">
+					<li class="flex-1 ">
 						<a href="<?php echo get_permalink($video_itm) ?>">
 							<div class="block h-60 w-40 bg-cover bg-center"
 								style="background-image: url('<?php echo get_the_post_thumbnail_url($video_itm->ID, 'full') ?>');">
@@ -55,7 +54,7 @@ $my_query = new WP_Query($args);
 								</span>
 							</div>
 
-							<h1 class="mt-5 w-full font-bold">
+							<h1 class="mt-5 pb-12 w-full font-bold ">
 								<?php echo $video_itm->post_title ?>
 							</h1>
 						</a>
