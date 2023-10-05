@@ -29,7 +29,6 @@ get_header();
 	<?php
 	if (!empty($query->posts)):
 		$video = $query->posts[0];
-		//dump_die($video);
 	
 
 		?>

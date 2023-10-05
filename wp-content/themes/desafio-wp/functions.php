@@ -1,8 +1,8 @@
 <?php 
 
 $scripts_version = 1.0;
-//dev version
-$scripts_version = time();
+//dev cache boosting
+//$scripts_version = time();
 
 add_theme_support( 'custom-logo' );
 
@@ -18,6 +18,7 @@ function play_override_style()
 }
 add_action('wp_enqueue_scripts', 'play_override_style', 10);
 
+//funcção para debug
 function dump_die($a){
     echo '<pre>';
     var_dump($a);
